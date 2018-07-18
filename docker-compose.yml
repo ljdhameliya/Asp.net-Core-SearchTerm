@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  aspnetcoresearchterm:
+    image: ${DOCKER_REGISTRY}aspnetcoresearchterm
+    build:
+      context: .
+      dockerfile: AspnetCoreSearchTerm/Dockerfile
