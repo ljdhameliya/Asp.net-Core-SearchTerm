@@ -1,0 +1,55 @@
+﻿@page
+@model AspnetCoreSearchTerm.Pages.SearchTerms.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SearchTerm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchKeyword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchKeyword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchBarFieldType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchBarFieldType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.PageSearchEnter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.PageSearchEnter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchSequence)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchSequence)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchByUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchByUser)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.SearchTerm.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

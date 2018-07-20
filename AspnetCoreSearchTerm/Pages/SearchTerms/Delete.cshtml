@@ -1,0 +1,58 @@
+﻿@page
+@model AspnetCoreSearchTerm.Pages.SearchTerms.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SearchTerm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchKeyword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchKeyword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchBarFieldType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchBarFieldType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.PageSearchEnter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.PageSearchEnter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchSequence)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchSequence)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchDateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SearchTerm.SearchByUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SearchTerm.SearchByUser)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="SearchTerm.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
